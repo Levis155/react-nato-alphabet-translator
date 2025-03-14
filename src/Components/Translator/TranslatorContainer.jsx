@@ -48,7 +48,7 @@ function TranslatorContainer() {
         <div className="input-button-container">
           <input
             type="text"
-            placeholder="word"
+            placeholder="enter word"
             value={inputValue}
             onChange={(e) => {
               setInputValue(e.target.value);

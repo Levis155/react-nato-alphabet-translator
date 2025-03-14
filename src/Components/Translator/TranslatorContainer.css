@@ -9,6 +9,12 @@
     flex-direction: column;
 }
 
+@media screen and (max-width: 37.25em) {
+    .translator-container{
+        padding-left: 5rem;
+    }
+  }
+
 form{
     display: flex;
     flex-direction: column;
@@ -27,6 +33,12 @@ form{
     border-left: 4px solid rgb(253, 254, 115);
 
 }
+
+@media screen and (max-width: 37.25em) {
+    .title{
+        font-size: 5rem;
+    }
+  }
 span{
     color: rgb(253, 254, 115);
 }
@@ -34,11 +46,15 @@ span{
     background-color: rgb(105, 73, 210);
     display: flex;
     align-items: center;
-    justify-content: center;
     gap: 3rem;
     padding: 3rem;
 }
-
+@media screen and (max-width: 37.25em) {
+    .input-button-container{
+      flex-direction: column;
+      align-items: start;
+    }
+  }
 input{
     padding: 1.5rem 1rem;
     width: 25rem;
@@ -49,7 +65,6 @@ input{
 }
 input::placeholder{
     text-transform: capitalize;
-    font-style: italic;
     font-size: 1.6rem;
     font-family: var(--primary-font);
 }
@@ -62,6 +77,7 @@ button{
     text-transform: capitalize;
     font-size: 1.6rem;
     font-family: var(--primary-font);
+    cursor: pointer;
 }
 
 .translation-container{
