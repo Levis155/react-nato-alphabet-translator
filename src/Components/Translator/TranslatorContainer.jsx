@@ -6,8 +6,7 @@ function TranslatorContainer() {
   const [inputValue, setInputValue] = useState("");
   const [renderedArray, setRenderedArray] = useState([]);
 
-  function handleTranslate(e) {
-    e.preventDefault();
+  function handleTranslate() {
     console.log(inputValue);
 
     const keysArray = Object.keys(natoAlphabetObject);
@@ -21,7 +20,7 @@ function TranslatorContainer() {
       let letter = inputValueArray[i];
 
       for (let j = 0; j < keysArray.length; j++) {
-        if (letter === keysArray[j]) {
+        if (letter.toLowerCase() === keysArray[j]) {
           value = valuesArray[j];
 
           valueLetters = value.split("");
@@ -45,16 +44,16 @@ function TranslatorContainer() {
           react <br /> <span>Nato alphabet translator</span>
         </h1>
 
-        <div className="input-button-container">
+        <div className="input-container">
           <input
             type="text"
             placeholder="enter word"
             value={inputValue}
             onChange={(e) => {
               setInputValue(e.target.value);
-            }}
+            }
+          } onKeyUp={() => {handleTranslate()}}
           />
-          <button onClick={handleTranslate}>translate</button>
         </div>
       </form>
 

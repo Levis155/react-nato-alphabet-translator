@@ -42,20 +42,13 @@ form{
 span{
     color: rgb(253, 254, 115);
 }
-.input-button-container{
+.input-container{
     background-color: rgb(105, 73, 210);
     display: flex;
     align-items: center;
     gap: 3rem;
     padding: 3rem;
 }
-@media screen and (max-width: 37.25em) {
-    .input-button-container{
-      flex-direction: column;
-      align-items: start;
-    }
-
-  }
 input{
     padding: 1.5rem 1rem;
     width: 25rem;
